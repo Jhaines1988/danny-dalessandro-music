@@ -129,7 +129,7 @@ const links = [
 // markup
 const IndexPage = ({ data }) => {
   const tag = data.allContentfulName.edges[0].node.tags;
-  console.log('props', tag);
+
   return <main style={pageStyles}>{tag}</main>;
 };
 
