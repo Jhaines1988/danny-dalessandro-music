@@ -1,0 +1,43 @@
+:root {
+  /* palette */
+  --black: rgb(0, 0, 0);
+
+  /* spaceing */
+  --space-sm: 4px;
+  --space-md: 8px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 48px;
+
+  /* sizing*/
+
+  --size-gutter: var(--space-2xl);
+  --size-max-width: 80rem;
+
+  /* font-size */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+  --text-4xl: 48px;
+  --text-5xl: 64px;
+  --text-6xl: 76px;
+
+  /* font-weight */
+  --body: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+  --extrabold: 800;
+  --heavy: 900;
+
+  /* colors */
+  --primary: #4a90e2;
+  --background: var(--black);
+
+  --border: var(--black);
+}

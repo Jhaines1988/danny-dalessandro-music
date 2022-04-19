@@ -130,7 +130,7 @@ const links = [
 const IndexPage = ({ data }) => {
   const tag = data.allContentfulName.edges[0].node.tags;
 
-  return <main style={pageStyles}>{tag}</main>;
+  return <>{tag}</>;
 };
 
 export default IndexPage;
