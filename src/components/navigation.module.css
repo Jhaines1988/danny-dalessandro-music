@@ -7,7 +7,7 @@
 }
 .link-logo {
   display: flex;
-  font-weight: var(--medium);
+  font-weight: bold;
   flex-direction: row;
   flex-shrink: 0;
   gap: var(--space-md);
@@ -48,4 +48,37 @@
 .nav-item a:hover {
   border-bottom-color: var(--primary);
   color: var(--primary);
+}
+
+@media (min-width: 40rem) {
+  .container {
+    justify-content: space-between;
+  }
+
+  .navigation {
+    padding-left: unset;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .title-link {
+    display: unset;
+  }
+  .link-logo {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .link-logo > span:last-child {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  } */
 }
