@@ -10,9 +10,24 @@
   --space-2xl: 24px;
   --space-3xl: 48px;
 
+  /* line-height */
+  --solid: 1;
+  --dense: 1.25;
+  --default: 1.5;
+  --loose: 1.75;
+
+  /* font-weight */
+  --body: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+  --extrabold: 800;
+  --heavy: 900;
+
   /* sizing*/
 
   --size-gutter: var(--space-2xl);
+  --size-logo: var(--space-2xl);
   --size-max-width: 80rem;
 
   /* font-size */
@@ -40,4 +55,11 @@
   --background: var(--black);
 
   --border: var(--black);
+
+  /* size */
+  --text-lead: var(--text-lg);
+  --text-prose: var(--text-md);
+  --text-title: var(--text-3xl);
+  /* tracking */
+  --text-prose-tracking: -0.011em;
 }

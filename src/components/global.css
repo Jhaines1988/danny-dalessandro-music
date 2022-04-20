@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--semibold);
+  line-height: var(--dense);
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+/* a:hover {
+    color: white;
+  } */
+
+a.active {
+  font-weight: var(--bold);
+}
+body {
+  font-size: var(--text-md);
+  font-weight: 400;
+  /* font-weight: ; */
+  line-height: var(--default);
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
