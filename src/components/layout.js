@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './footer';
 import Navigation from './navigation';
+import Container from './container';
 import './variable.css';
 import './global.css';
 
@@ -10,7 +11,9 @@ const Layout = function (props) {
   return (
     <>
       <Navigation />
-      <main>{children}</main>
+      <Container>
+        <main>{children}</main>
+      </Container>
       <Footer />
     </>
   );
