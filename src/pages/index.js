@@ -1,7 +1,39 @@
 import * as React from 'react';
-import Hero from '../components/home';
+
 import { graphql } from 'gatsby';
+
+import Home from '../components/home';
 // styles
+
+// markup
+const IndexPage = ({ data }) => {
+  const tag = data.allContentfulName.edges[0].node.tags;
+
+  return (
+    <>
+      <Home />
+    </>
+  );
+};
+
+export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    allContentfulName {
+      edges {
+        node {
+          id
+          contentful_id
+          tags
+        }
+      }
+    }
+  }
+`;
+/*
+
+
 const pageStyles = {
   color: '#232129',
   padding: 96,
@@ -126,29 +158,11 @@ const links = [
   },
 ];
 
-// markup
-const IndexPage = ({ data }) => {
-  const tag = data.allContentfulName.edges[0].node.tags;
-  console.log('props', tag);
-  return <main style={pageStyles}>{tag}</main>;
-};
 
-export default IndexPage;
 
-export const pageQuery = graphql`
-  query {
-    allContentfulName {
-      edges {
-        node {
-          id
-          contentful_id
-          tags
-        }
-      }
-    }
-  }
-`;
-/*      <Hero />
+
+
+<Hero />
       {/* <title>Home Page</title>
       <h1 style={headingStyles}>
         Congratulations
