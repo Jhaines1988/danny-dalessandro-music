@@ -7,7 +7,7 @@ const Navigation = () => (
     <Link to='/' className={styles.linkLogo}>
       <img className={styles.logo} src={icon} />
 
-      <span className={styles.titleLink}>Danny D'allesandro Music</span>
+      <span className={styles.titleLink}>Danny D'Alessandro Music</span>
     </Link>
     <ul className={styles.navigation}>
       <li className={styles.navItem}>

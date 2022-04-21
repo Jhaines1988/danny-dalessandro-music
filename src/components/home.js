@@ -1,6 +1,7 @@
 import React from 'react';
 import * as styles from './home.module.css';
-
+import { Link } from 'gatsby';
+import { navigate } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 const Home = (props) => {
   return (
@@ -8,23 +9,34 @@ const Home = (props) => {
       <h1 className={styles.logoAnimation}>Danny D'Alessandro Music</h1>
       <div className={styles.heroTextContainer}>
         <StaticImage
-          src='../images/Photo Mar 22, 6 39 11 PM.jpg'
-          alt="Danny D'alessandro"
-          className={styles.image}
+          src='../images/BlackAndWhiteBanjo.jpg'
+          alt="Danny D'Alessandro"
+          className={styles.imageWrapper}
         />
 
-        <p className={styles.content}>
-          Danny D'Alessandro is a multi-instrumentalist, singer-songwriter, and
-          arranger, based in Telluride, CO.
-        </p>
-        <div className={styles.buttonContainer}>
-          <button onClick={() => {}}>Contact</button>
-          <button onClick={() => {}}>Listen</button>
-          <button onClick={() => {}}>Learn More</button>
-        </div>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>Multi-Instrumentalist</li>
+          <li className={styles.listItem}>Singer-Songwriter</li>
+          <li className={styles.listItem}>Studio Musician</li>
+          <li className={styles.listItem}>Arranger</li>
+        </ul>
+
+        <button
+          className={styles.contactButton}
+          onClick={() => {
+            navigate('/contact');
+          }}
+          activeClassName='active'>
+          Contact
+        </button>
       </div>
       <div className={styles.videoFeed}>
-        <h2 className={styles.heading2}>Listen Up!</h2>
+        <h2 className={styles.heading2}>
+          {' '}
+          <Link to='/listen' activeClassName='active'>
+            Listen Up!
+          </Link>
+        </h2>
         <div
           name='placeholder'
           style={{
