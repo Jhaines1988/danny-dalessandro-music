@@ -3,9 +3,11 @@ import * as styles from './home.module.css';
 import { Link } from 'gatsby';
 import { navigate } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-const Home = (props) => {
+import { graphql } from 'gatsby';
+const Home = ({ data }) => {
+  console.log('data', data);
   return (
-    <>
+    <div className={styles.outerContainer}>
       <h1 className={styles.logoAnimation}>Danny D'Alessandro Music</h1>
       <div className={styles.heroTextContainer}>
         <StaticImage
@@ -37,41 +39,33 @@ const Home = (props) => {
             Listen Up!
           </Link>
         </h2>
-        <div
+
+        <iframe
+          className={styles.embedVideoContainer}
+          width='577'
+          height='324'
+          src='https://www.youtube.com/embed/h5yJQMt0Hyo'
+          title='YouTube video player'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          // webkitallowfullscreen='true'
+          // mozallowfullscreen='true'
+          allowFullScreen
+        />
+        {/* <div
           name='placeholder'
           style={{
-            minHeight: 250,
+            minHeight: 300,
+            minWidth: 300,
             backgroundColor: 'black',
             color: 'white',
             textAlign: 'center',
           }}>
           {' '}
           Video Content
-        </div>
-        <div
-          name='placeholder'
-          style={{
-            minHeight: 250,
-            backgroundColor: 'black',
-            color: 'white',
-            textAlign: 'center',
-          }}>
-          {' '}
-          Video Content
-        </div>
-        <div
-          name='placeholder'
-          style={{
-            minHeight: 250,
-            backgroundColor: 'black',
-            color: 'white',
-            textAlign: 'center',
-          }}>
-          {' '}
-          Video Content
-        </div>
+        </div> */}
       </div>
-    </>
+    </div>
   );
 };
 

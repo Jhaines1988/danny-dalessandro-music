@@ -7,7 +7,7 @@ import Home from '../components/home';
 
 // markup
 const IndexPage = ({ data }) => {
-  const tag = data.allContentfulName.edges[0].node.tags;
+  console.log('DATA', data);
 
   return (
     <>
@@ -18,14 +18,22 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage;
 
-export const pageQuery = graphql`
+export const query = graphql`
   query {
-    allContentfulName {
+    allContentfulMusicVideo {
       edges {
         node {
-          id
-          contentful_id
+          title
+          videoUrl {
+            url
+          }
           tags
+          artist {
+            tags
+          }
+          description {
+            raw
+          }
         }
       }
     }
