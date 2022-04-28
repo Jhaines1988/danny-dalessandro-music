@@ -1,7 +1,11 @@
 import * as React from 'react';
 
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
+import { convertToBgImage } from 'gbimage-bridge';
+import BackgroundImage from 'gatsby-background-image';
+import GbiBridged from '../components/gbi-bridged';
 import Home from '../components/home';
 // styles
 
@@ -11,7 +15,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <Home />
+      <Home videoData={data.allContentfulVideoPost.nodes} />
     </>
   );
 };
@@ -19,20 +23,19 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const query = graphql`
-  query {
-    allContentfulMusicVideo {
+  {
+    allContentfulVideoPost {
+      nodes {
+        title
+        url
+        tags
+      }
+    }
+    allContentfulBackgroundImages {
       edges {
         node {
-          title
-          videoUrl {
-            url
-          }
-          tags
-          artist {
-            tags
-          }
-          description {
-            raw
+          picture {
+            gatsbyImage(fit: COVER, formats: AUTO, height: 10, width: 10)
           }
         }
       }

@@ -1,0 +1,5 @@
+.background-hero-image {
+  max-width: var(--size-max-width);
+  /* min-height: 50vh; */
+  width: 100%;
+}

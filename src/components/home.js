@@ -4,67 +4,49 @@ import { Link } from 'gatsby';
 import { navigate } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
-const Home = ({ data }) => {
-  console.log('data', data);
+import GbiBridged from './gbi-bridged';
+import Iframe from './Iframe';
+import VideoBanner from './videobanner';
+const Home = ({ videoData }) => {
   return (
     <div className={styles.outerContainer}>
-      <h1 className={styles.logoAnimation}>Danny D'Alessandro Music</h1>
-      <div className={styles.heroTextContainer}>
-        <StaticImage
-          src='../images/BlackAndWhiteBanjo.jpg'
-          alt="Danny D'Alessandro"
-          className={styles.imageWrapper}
-        />
+      <GbiBridged>
+        <div className={styles.heroTextContainer}>
+          <h1 className={styles.logoAnimation}>Danny D'Alessandro Music</h1>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>Multi-Instrumentalist</li>
+            <li className={styles.listItem}>Singer-Songwriter</li>
+            <li className={styles.listItem}>Studio Musician</li>
+            <li className={styles.listItem}>Arranger</li>
+          </ul>
 
-        <ul className={styles.list}>
-          <li className={styles.listItem}>Multi-Instrumentalist</li>
-          <li className={styles.listItem}>Singer-Songwriter</li>
-          <li className={styles.listItem}>Studio Musician</li>
-          <li className={styles.listItem}>Arranger</li>
-        </ul>
+          <button
+            className={styles.contactButton}
+            onClick={() => {
+              navigate('/contact');
+            }}
+            activeClassName='active'>
+            Contact
+          </button>
+        </div>
+      </GbiBridged>
 
-        <button
-          className={styles.contactButton}
-          onClick={() => {
-            navigate('/contact');
-          }}
-          activeClassName='active'>
-          Contact
-        </button>
-      </div>
-      <div className={styles.videoFeed}>
+      {/* <div className={styles.videoFeed}>
         <h2 className={styles.heading2}>
           {' '}
           <Link to='/listen' activeClassName='active'>
             Listen Up!
           </Link>
         </h2>
-
-        <iframe
-          className={styles.embedVideoContainer}
-          width='577'
-          height='324'
-          src='https://www.youtube.com/embed/h5yJQMt0Hyo'
-          title='YouTube video player'
-          frameBorder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          // webkitallowfullscreen='true'
-          // mozallowfullscreen='true'
-          allowFullScreen
-        />
-        {/* <div
-          name='placeholder'
-          style={{
-            minHeight: 300,
-            minWidth: 300,
-            backgroundColor: 'black',
-            color: 'white',
-            textAlign: 'center',
-          }}>
-          {' '}
-          Video Content
-        </div> */}
-      </div>
+        {videoData.map((node, i) => (
+          <Iframe
+            key={i}
+            videoURL={node.url}
+            title={node.title}
+            tags={node.tags}
+          />
+        ))}
+      </div> */}
     </div>
   );
 };
