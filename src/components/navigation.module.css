@@ -56,8 +56,8 @@
   }
 
   .navigation {
-    padding-left: unset;
-    width: 100%;
+    padding-left: 0;
+    width: 44%;
     justify-content: space-around;
   }
 
@@ -69,6 +69,12 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .container {
+    font-size: 24px;
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   /* .link-logo > span:last-child {
     border: 0;

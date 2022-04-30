@@ -1,5 +1,6 @@
 import React from 'react';
-
+import RecordMp4 from '../video/Record - 65387.mp4';
+import RecordwebM from '../video/Record-65387.webm';
 const VideoBanner = function () {
   return (
     <video
@@ -20,8 +21,8 @@ const VideoBanner = function () {
       autoPlay
       muted
       loop>
-      {/* <source src={BalooAlt} type='video/webm' />
-      <source src={Baloovid} type='video/mp4' /> */}
+      <source src={RecordwebM} type='video/webm' />
+      <source src={RecordMp4} type='video/mp4' />
     </video>
   );
 };

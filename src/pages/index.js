@@ -1,18 +1,11 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 
-import { graphql, useStaticQuery } from 'gatsby';
-import { getImage, GatsbyImage } from 'gatsby-plugin-image';
-
-import { convertToBgImage } from 'gbimage-bridge';
-import BackgroundImage from 'gatsby-background-image';
-import GbiBridged from '../components/gbi-bridged';
 import Home from '../components/home';
 // styles
 
 // markup
 const IndexPage = ({ data }) => {
-  console.log('DATA', data);
-
   return (
     <>
       <Home videoData={data.allContentfulVideoPost.nodes} />

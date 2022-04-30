@@ -1,16 +1,43 @@
 import React from 'react';
 import * as styles from './home.module.css';
-import { Link } from 'gatsby';
+
 import { navigate } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import GbiBridged from './gbi-bridged';
 import Iframe from './Iframe';
 import VideoBanner from './videobanner';
 const Home = ({ videoData }) => {
+  const data = useStaticQuery(graphql`
+    {
+      contentfulBackgroundImages(isHomePageHero: { eq: true }) {
+        picture {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: TRACED_SVG
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+  `);
+
+  const image = getImage(data.contentfulBackgroundImages.picture);
+
   return (
     <div className={styles.outerContainer}>
-      <GbiBridged>
+      {/* <GbiBridged image={pluginImage}> */}
+      <VideoBanner />
+      <div style={{ display: 'grid ' }}>
+        {/* <StaticImage
+          style={{ gridArea: '1/1' }}
+          layout='fullWidth'
+          alt=''
+          src={'../images/colorful-sax-hero.jpg'}
+          formats={['auto', 'webp', 'avif']}
+        /> */}
+        <GatsbyImage image={image} alt='' className={styles.imageWrapper} />
+
         <div className={styles.heroTextContainer}>
           <h1 className={styles.logoAnimation}>Danny D'Alessandro Music</h1>
           <ul className={styles.list}>
@@ -29,7 +56,8 @@ const Home = ({ videoData }) => {
             Contact
           </button>
         </div>
-      </GbiBridged>
+      </div>
+      {/* </GbiBridged> */}
 
       {/* <div className={styles.videoFeed}>
         <h2 className={styles.heading2}>
