@@ -1,4 +1,4 @@
-/* .background-hero-image {
+.background-hero-image {
   max-width: var(--size-max-width);
   height: auto;
   width: 100%;
@@ -9,4 +9,4 @@
   .background-hero-image {
     max-width: 100%;
   }
-} */
+}

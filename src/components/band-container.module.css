@@ -1,12 +1,15 @@
-.heading {
+.label {
   text-align: center;
   margin: 0;
   font-size: 24px;
+  text-align: center;
+  display: block;
 }
 
 .band-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .video {

@@ -4,7 +4,7 @@ import * as styles from './listen-container.module.css';
 const ListenContainer = function ({ bands }) {
   console.log(bands);
   return (
-    <div className={styles.bandContainer}>
+    <div className={styles.listenContainer}>
       {bands.map((bandNode, i) => {
         return (
           <BandContainer

@@ -17,7 +17,7 @@ export default ListenPage;
 
 export const query = graphql`
   {
-    allContentfulBand {
+    allContentfulBand(sort: { fields: contentful_id }) {
       edges {
         node {
           bandName
@@ -25,6 +25,11 @@ export const query = graphql`
             title
             url
             tags
+            description {
+              childMarkdownRemark {
+                html
+              }
+            }
           }
         }
       }
