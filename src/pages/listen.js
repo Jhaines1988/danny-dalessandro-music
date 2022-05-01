@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import VideoBanner from '../components/videobanner';
 import ListenContainer from '../components/listen-container';
 const ListenPage = ({ data }) => {
-  const bands = data.allContentfulVideoPost.edges;
+  const bands = data.allContentfulBand.edges;
 
   return (
     <>
@@ -17,14 +17,15 @@ export default ListenPage;
 
 export const query = graphql`
   {
-    allContentfulVideoPost(sort: { fields: band___id }) {
+    allContentfulBand {
       edges {
         node {
-          band {
-            bandName
+          bandName
+          musicVideo {
+            title
+            url
+            tags
           }
-          tags
-          url
         }
       }
     }

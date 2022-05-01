@@ -1,2 +1,17 @@
+.heading {
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
+}
+
 .band-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video {
+  width: 327px;
+  height: 227px;
+  padding: 4px;
+  margin: 4px;
 }

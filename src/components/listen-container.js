@@ -8,9 +8,8 @@ const ListenContainer = function ({ bands }) {
       {bands.map((bandNode, i) => {
         return (
           <BandContainer
-            bandName={bandNode.node.band.bandName}
-            tags={bandNode.node.tags}
-            url={bandNode.node.url}
+            bandName={bandNode.node.bandName}
+            musicVideo={bandNode.node.musicVideo}
           />
         );
       })}

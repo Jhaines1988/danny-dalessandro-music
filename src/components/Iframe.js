@@ -5,13 +5,13 @@ const Iframe = function ({ videoURL, tags, ...props }) {
   return (
     <>
       <iframe
-        className={props.classname ? props.className : styles.iframePlayer}
+        className={props.className ? props.className : styles.iframePlayer}
         src={videoURL}
         title='Youtube Video Player'
         frameBorder='0'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        // webkitallowfullscreen='true'
-        // mozallowfullscreen='true'
+        webkitallowfullscreen='true'
+        mozallowfullscreen='true'
         allowFullScreen
       />
       {/* {tags &&
