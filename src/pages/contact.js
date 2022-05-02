@@ -1,7 +1,7 @@
 import * as React from 'react';
-
+import Layout from '../components/layout';
 const ContactPage = (props) => {
-  return <div> Hello</div>;
+  return <Layout> </Layout>;
 };
 
 export default ContactPage;

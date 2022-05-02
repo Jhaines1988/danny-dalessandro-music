@@ -6,17 +6,17 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 import GbiBridged from './gbi-bridged';
 import Iframe from './Iframe';
-import VideoBanner from './videobanner';
+
 const Home = ({ videoData }) => {
   return (
     <div className={styles.outerContainer}>
       <h1 className={styles.logoAnimation}>Danny D'Alessandro Music</h1>
       <div className={styles.heroTextContainer}>
-        <StaticImage
+        {/* <StaticImage
           src='../images/BlackAndWhiteBanjo.jpg'
           alt="Danny D'Alessandro"
           className={styles.imageWrapper}
-        />
+        /> */}
 
         <ul className={styles.list}>
           <li className={styles.listItem}>Multi-Instrumentalist</li>
