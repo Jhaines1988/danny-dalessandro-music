@@ -1,31 +1,36 @@
 import * as React from 'react';
+import Home from '../components/home';
+import Layout from '../components/layout';
 
 import { graphql } from 'gatsby';
-
-import Home from '../components/home';
 // styles
 
 // markup
 const IndexPage = ({ data }) => {
-  const tag = data.allContentfulName.edges[0].node.tags;
-
   return (
-    <>
-      <Home />
-    </>
+    <Layout>
+      <Home videoData={data.allContentfulVideoPost.nodes} />
+    </Layout>
   );
 };
 
 export default IndexPage;
 
-export const pageQuery = graphql`
-  query {
-    allContentfulName {
+export const query = graphql`
+  {
+    allContentfulVideoPost {
+      nodes {
+        title
+        url
+        tags
+      }
+    }
+    allContentfulBackgroundImages {
       edges {
         node {
-          id
-          contentful_id
-          tags
+          picture {
+            gatsbyImage(fit: COVER, formats: AUTO, height: 10, width: 10)
+          }
         }
       }
     }
