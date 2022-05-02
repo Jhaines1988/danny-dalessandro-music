@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <nav role='navigation' className={styles.container} aria-label='Main'>
       <Link to='/' className={styles.linkLogo}>
-        <img className={styles.logo} src={icon} />
+        <img className={styles.logo} src={icon} alt='icon' />
 
         <span className={styles.titleLink}>Danny D'Alessandro Music</span>
       </Link>

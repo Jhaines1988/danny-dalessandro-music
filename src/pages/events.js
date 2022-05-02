@@ -1,7 +1,7 @@
 import React from 'react';
-
+import Layout from '../components/layout';
 const EventsPage = (props) => {
-  return <></>;
+  return <Layout></Layout>;
 };
 
 export default EventsPage;

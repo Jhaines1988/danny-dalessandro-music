@@ -1,11 +1,10 @@
 import React from 'react';
-import * as styles from './Iframe.module.css';
+
 const Iframe = function ({ videoURL, tags, ...props }) {
-  const url = ' https://www.youtube.com/embed/h5yJQMt0Hyo';
   return (
     <>
       <iframe
-        className={props.className ? props.className : styles.iframePlayer}
+        // className={props.className ? props.className : styles.iframePlayer}
         src={videoURL}
         title='Youtube Video Player'
         frameBorder='0'

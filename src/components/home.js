@@ -4,8 +4,7 @@ import * as styles from './home.module.css';
 import { navigate } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
-import GbiBridged from './gbi-bridged';
-import Iframe from './Iframe';
+
 import VideoBanner from './videobanner';
 const Home = ({ videoData }) => {
   const data = useStaticQuery(graphql`

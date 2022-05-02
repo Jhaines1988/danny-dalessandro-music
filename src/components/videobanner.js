@@ -8,8 +8,8 @@ const VideoBanner = function () {
       className={styles.video}
       //   width='1280px'
       //   height='444'
-      autoPlay
       muted
+      autoPlay
       loop>
       <source src={RecordwebM} type='video/webm' />
       <source src={RecordMp4} type='video/mp4' />

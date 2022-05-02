@@ -90,11 +90,11 @@ module.exports = {
       },
       __key: 'pages',
     },
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve('./src/components/layout.js'),
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    //   options: {
+    //     component: require.resolve('./src/components/layout.js'),
+    //   },
+    // },
   ],
 };

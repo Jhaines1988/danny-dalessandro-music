@@ -4,6 +4,8 @@
   justify-content: center;
   margin: 0 auto;
   padding: var(--space-2xl) var(--size-gutter);
+  background: #f5f5dc63;
+  color: black;
 }
 .link-logo {
   display: flex;
