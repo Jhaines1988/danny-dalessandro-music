@@ -9,33 +9,31 @@ import { graphql } from 'gatsby';
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <Home videoData={data.allContentfulVideoPost.nodes} />
+      <Home />
     </Layout>
   );
 };
 
 export default IndexPage;
 
-export const query = graphql`
-  {
-    allContentfulVideoPost {
-      nodes {
-        title
-        url
-        tags
-      }
-    }
-    allContentfulBackgroundImages {
-      edges {
-        node {
-          picture {
-            gatsbyImage(fit: COVER, formats: AUTO, height: 10, width: 10)
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   {
+//     allContentfulVideoPost {
+//       nodes {
+//         title
+//         url
+//         tags
+//       }
+//     }
+//     allContentfulBackgroundImages(filter: { isHomePageHero: { eq: true } }) {
+//       nodes {
+//         picture {
+//           url
+//         }
+//       }
+//     }
+//   }
+// `;
 /*
 
 

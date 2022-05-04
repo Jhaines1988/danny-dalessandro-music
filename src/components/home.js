@@ -3,38 +3,27 @@ import * as styles from './home.module.css';
 
 import { navigate } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
-import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+import { getImage, GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 import VideoBanner from './videobanner';
-const Home = ({ videoData }) => {
+const Home = () => {
   const data = useStaticQuery(graphql`
     {
-      contentfulBackgroundImages(isHomePageHero: { eq: true }) {
-        picture {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            placeholder: TRACED_SVG
-            formats: [AUTO, WEBP, AVIF]
-          )
+      contentfulHeroImages(isHomePageHero: { eq: true }) {
+        id
+        hero {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
   `);
 
-  const image = getImage(data.contentfulBackgroundImages.picture);
+  const image = getImage(data.contentfulHeroImages.hero);
 
   return (
     <div className={styles.outerContainer}>
-      {/* <GbiBridged image={pluginImage}> */}
       <VideoBanner />
-      <div style={{ display: 'grid ' }}>
-        {/* <StaticImage
-          style={{ gridArea: '1/1' }}
-          layout='fullWidth'
-          alt=''
-          src={'../images/colorful-sax-hero.jpg'}
-          formats={['auto', 'webp', 'avif']}
-        /> */}
+      <div style={{ display: 'grid' }}>
         <GatsbyImage image={image} alt='' className={styles.imageWrapper} />
 
         <div className={styles.heroTextContainer}>
@@ -50,30 +39,11 @@ const Home = ({ videoData }) => {
             className={styles.contactButton}
             onClick={() => {
               navigate('/contact');
-            }}
-            activeClassName='active'>
+            }}>
             Contact
           </button>
         </div>
       </div>
-      {/* </GbiBridged> */}
-
-      {/* <div className={styles.videoFeed}>
-        <h2 className={styles.heading2}>
-          {' '}
-          <Link to='/listen' activeClassName='active'>
-            Listen Up!
-          </Link>
-        </h2>
-        {videoData.map((node, i) => (
-          <Iframe
-            key={i}
-            videoURL={node.url}
-            title={node.title}
-            tags={node.tags}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };
