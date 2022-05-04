@@ -2,3 +2,13 @@
   display: grid;
   grid-template-columns: auto;
 }
+
+@media (min-width: 80rem) {
+  .about-layout {
+    grid: 100px auto / 1fr 1fr;
+    column-gap: 8px;
+    /* grid: 100px auto / 3fr 4fr; */
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); */
+  }
+}
