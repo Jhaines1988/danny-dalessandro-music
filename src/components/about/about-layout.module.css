@@ -1,3 +1,4 @@
 .about-layout {
   display: grid;
+  grid-template-columns: auto;
 }

@@ -78,7 +78,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: `${__dirname}/src/images`,
       },
       __key: 'images',
     },
@@ -90,6 +90,31 @@ module.exports = {
       },
       __key: 'pages',
     },
+    {
+      resolve: 'gatsby-transformer-cloudinary',
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        // This folder will be created if it doesn’t exist.
+        uploadFolder: 'gatsby-cloudinary',
+      },
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
+
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        prefix: `gatsby-cloudinary/`,
+        context: true,
+        tags: true,
+        maxResults: 50,
+      },
+    },
+
     // {
     //   resolve: `gatsby-plugin-layout`,
     //   options: {

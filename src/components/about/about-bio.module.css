@@ -1,2 +1,6 @@
 .body {
 }
+
+div:first-of-type p {
+  font-size: 20px;
+}
