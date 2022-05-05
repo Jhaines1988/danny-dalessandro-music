@@ -1,6 +1,7 @@
 .about-layout {
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
 }
 
 /* @media (min-width: 64rem) {

@@ -1,4 +1,5 @@
 .body {
+  grid-row: 1/2;
 }
 @media (min-width: 768px) {
   div.body > p {
