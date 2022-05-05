@@ -17,13 +17,13 @@ const variants = {
     // x: 0,
     opacity: 1,
   },
-  // exit: (direction) => {
-  //   return {
-  //     zIndex: 0,
-  //     x: direction < 0 ? 1000 : -1000,
-  //     opacity: 0,
-  //   };
-  // },
+  exit: (direction) => {
+    return {
+      zIndex: 0,
+      // x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
 };
 
 const swipeConfidenceThreshold = 10000;
@@ -45,9 +45,9 @@ const ImageCarousel = ({ cloudinaryImages }) => {
 
   return (
     <>
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.div className={styles.animatedDiv}>
-          <motion.div className={styles.imageWrapper}>
+      <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
+        <div className={styles.animatedDiv}>
+          <div className={styles.imageWrapper}>
             <button className={styles.prev} onClick={() => paginate(-1)}>
               {/* <FontAwesomeIcon
                 title='previous image in carousel'
@@ -64,14 +64,14 @@ const ImageCarousel = ({ cloudinaryImages }) => {
               variants={variants}
               initial='enter'
               animate='center'
-              // exit='exit'
-              transition={{
-                x: { type: 'spring', stiffness: 300, damping: 30 },
-                opacity: { duration: 0.9 },
-              }}
+              exit='exit'
               drag='x'
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={1}
+              transition={{
+                // x: { type: 'spring', stiffness: 100, damping: 30 },
+                opacity: { duration: 0.9 },
+              }}
               onDragEnd={(e, { offset, velocity }) => {
                 const swipe = swipePower(offset.x, velocity.x);
 
@@ -90,8 +90,8 @@ const ImageCarousel = ({ cloudinaryImages }) => {
                 fixedWidth
               /> */}
             </button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </AnimatePresence>
     </>
   );

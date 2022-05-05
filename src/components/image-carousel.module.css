@@ -1,14 +1,13 @@
 .animated-div {
   display: grid;
-
   height: 100%;
 }
-
 .image-wrapper {
   display: grid;
   grid-area: 1/1;
   width: 100%;
   max-width: 100%;
+
   position: relative;
   grid: repeat(3, auto) / auto 1fr auto;
   align-items: start;
