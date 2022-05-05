@@ -2,11 +2,21 @@
   display: grid;
 }
 .hero-image {
-  /* grid-row: 1/-1;
-  grid-column: 1/-1; */
+  /* grid-column: 2/3;
+  grid-row: 2/3; */
 }
-
+/*
+@media (min-width: 64rem) {
+  .hero-image {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+} */
 @media (min-width: 80rem) {
+  .hero-image {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
   .image-container {
     /* display: flex;
     flex-direction: column; */

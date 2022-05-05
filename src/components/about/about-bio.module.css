@@ -6,16 +6,33 @@ div:first-of-type p {
 }
 
 @media (min-width: 768px) {
-  div:first-of-type p {
-    font-size: 30px;
+  div.body > p {
+    font-size: 22px;
   }
 }
+
 @media (min-width: 80rem) {
   .body {
     grid-row: 2/3;
     grid-column: 1/2;
   }
+  /* div.body > p {
+    font-size: 28px;
+  } */
+}
+@media (min-width: 100rem) {
   div.body > p {
-    /* font-size: 44px; */
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 120rem) {
+  div.body > p {
+    font-size: 30px;
+  }
+}
+@media (min-width: 140rem) {
+  div.body > p {
+    font-size: 34px;
   }
 }

@@ -50,3 +50,8 @@
   .animated-div {
   }
 }
+@media (min-width: 80rem) {
+  .animated-div {
+    grid-column: 2/3;
+  }
+}
