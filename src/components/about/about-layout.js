@@ -2,9 +2,11 @@ import React from 'react';
 import Footer from '../footer';
 import Navigation from '../navigation';
 import Container from '../container';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import '../variable.css';
 import '../global.css';
 import * as styles from './about-layout.module.css';
+
 const AboutLayout = function (props) {
   const { children } = props;
 

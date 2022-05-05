@@ -1,51 +1,56 @@
 .animated-div {
   display: grid;
-  max-width: 600px;
   height: 100%;
 }
-
 .image-wrapper {
   display: grid;
   grid-area: 1/1;
   width: 100%;
   max-width: 100%;
-  padding-bottom: 56.25%;
-  height: 100%;
+
   position: relative;
-  justify-content: center;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto 1fr auto;
+  grid: repeat(3, auto) / auto 1fr auto;
+  align-items: start;
 }
 .prev,
 .next {
-  width: 2px;
-  color: blue;
-  background-color: blue;
+  padding: 2px;
+  height: 4rem;
+  border: none;
+  position: relative;
+  background-color: greenyellow;
+  opacity: 0.6;
   height: 2rem;
   align-self: center;
-  grid-row: 3;
+  grid-row: 2/3;
+  z-index: 99;
+}
+.gatsby-img {
+  /* max-height: 300px;
+  max-width: 300px; */
+  align-self: center;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  width: 100%;
+  padding: 8px;
+  margin-top: 20px;
 }
 
 .prev {
-  grid-column: 1;
+  grid-column: 1/2;
+  left: 1rem;
 }
 .next {
-  grid-column: 3;
+  grid-column: 3/-1;
+  right: 1rem;
 }
-/* .image-wrapper div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-} */
-.gatsby-img {
-  grid-row: 1/5;
-  grid-column: 1/4;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  padding: 8px;
+
+@media (min-width: 768px) {
+  .animated-div {
+  }
+}
+@media (min-width: 80rem) {
+  .animated-div {
+    grid-column: 2/3;
+  }
 }

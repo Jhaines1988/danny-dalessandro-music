@@ -10,7 +10,8 @@ const AboutPage = ({ data }) => {
   const aboutData = data.allContentfulMusician.nodes[0];
   const mainHeader = aboutData.mainHeader;
   const bioText = aboutData.bio.childMarkdownRemark.html;
-  const heroImage = aboutData.heroImage.hero.gatsbyImageData;
+  const heroImage =
+    aboutData.heroImage.childContentfulHeroImagesHeroJsonNode.secure_url;
   const inspiredData = data.allContentfulInspiredText.nodes;
 
   return (
@@ -37,8 +38,8 @@ export const query = graphql`
         }
         heroImage {
           isAboutHero
-          hero {
-            gatsbyImageData(layout: FULL_WIDTH)
+          childContentfulHeroImagesHeroJsonNode {
+            secure_url
           }
         }
       }

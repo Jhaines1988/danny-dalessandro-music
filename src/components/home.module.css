@@ -6,9 +6,6 @@
   grid-area: 1/1;
 }
 
-.image-wrapper {
-  grid-area: 1/1;
-}
 .hero-text-container {
   grid-area: 1/1;
   position: relative;
@@ -19,6 +16,12 @@
   max-width: var(--size-max-width);
   grid-template-rows: repeat(5, minmax(auto, 1fr));
   grid-template-columns: repeat(5, minmax(auto, 1fr));
+}
+
+.image-wrapper {
+  /* to use as background image from cloudinary*/
+  grid-row: 1/-1;
+  grid-column: 1/-1;
 }
 .logo-animation {
   margin: 0;

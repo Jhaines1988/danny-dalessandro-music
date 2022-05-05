@@ -108,7 +108,7 @@ module.exports = {
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
-        prefix: `gatsby-cloudinary/`,
+        prefix: `Danny/`,
         context: true,
         tags: true,
         maxResults: 50,
