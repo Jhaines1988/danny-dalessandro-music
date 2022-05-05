@@ -49,12 +49,12 @@ const ImageCarousel = ({ cloudinaryImages }) => {
         <motion.div className={styles.animatedDiv}>
           <motion.div className={styles.imageWrapper}>
             <button className={styles.prev} onClick={() => paginate(-1)}>
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 title='previous image in carousel'
                 icon={chevronLeft}
                 size='2xl'
                 fixedWidth
-              />
+              /> */}
             </button>
             <motion.img
               className={styles.gatsbyImg}
@@ -83,12 +83,12 @@ const ImageCarousel = ({ cloudinaryImages }) => {
               }}
             />
             <button className={styles.next} onClick={() => paginate(1)}>
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 title='next image in carousel'
                 icon={chevronRight}
                 size='2xl'
                 fixedWidth
-              />
+              /> */}
             </button>
           </motion.div>
         </motion.div>
