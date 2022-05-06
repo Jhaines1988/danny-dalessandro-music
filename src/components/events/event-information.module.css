@@ -1,0 +1,25 @@
+.event-information-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.body > h1 {
+  text-align: center;
+}
+.cloudinary-image {
+  border-radius: 8px;
+  padding: 1rem;
+  /* max-width: 400px; */
+}
+@media (min-width: 768px) {
+  .cloudinary-image {
+    /* width: min(400px, 30%); */
+    width: 600px;
+  }
+}

@@ -1,0 +1,9 @@
+.body {
+}
+
+div.body h1 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+}

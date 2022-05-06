@@ -34,7 +34,7 @@ a.active {
   font-weight: var(--bold);
 }
 body {
-  background-color: black;
+  background-color: rgb(160, 124, 124);
   font-size: var(--text-md);
   font-weight: 400;
   color: white;
