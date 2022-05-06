@@ -37,25 +37,6 @@ const chevronRight = icon({
 });
 const chevronLeft = icon({ prefix: 'fas', iconName: 'chevron-left' });
 const ImageCarousel = ({ cloudinaryImages }) => {
-  const data = useStaticQuery(graphql`
-    {
-      contentfulCarouselImages(collectionName: { eq: "Nature" }) {
-        id
-        images {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            height: 600
-          )
-        }
-      }
-    }
-  `);
-  const gatsbyImages = data.contentfulCarouselImages.images;
-
-  console.log(data.contentfulCarouselImages.images);
-
-  const gastbyImageIndex = wrap(0, gatsbyImages.length, page);
   const [[page, direction], setPage] = useState([0, 0]);
   const imageIndex = wrap(0, cloudinaryImages.length, page);
 
