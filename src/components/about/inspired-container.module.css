@@ -4,13 +4,16 @@
   grid-auto-rows: 1fr;
 }
 
-/* @media (min-width: 64rem) {
+@media (min-width: 768px) {
   .inspired-container {
-    display: grid;
-    grid-column: 1/3;
-
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
   }
-} */
+}
 
 @media (min-width: 80rem) {
   .inspired-container {

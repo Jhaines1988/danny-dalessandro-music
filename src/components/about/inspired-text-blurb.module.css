@@ -2,6 +2,13 @@
   grid-row: 1/2;
 }
 @media (min-width: 768px) {
+  .body {
+    grid-row: unset;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    justify-content: center;
+  }
   div.body > p {
     font-size: 22px;
   }
@@ -9,6 +16,7 @@
 
 @media (min-width: 80rem) {
   .body {
+    grid-row: unset;
   }
   /* div.body > p {
       font-size: 28px;

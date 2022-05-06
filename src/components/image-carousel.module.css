@@ -1,7 +1,3 @@
-.animated-div {
-  display: grid;
-  height: 100%;
-}
 .image-wrapper {
   display: flex;
   width: 100%;
@@ -9,6 +5,7 @@
   position: relative;
   flex-direction: column;
   justify-content: flex-end;
+  height: 327px;
 }
 
 .gatsby-img {
@@ -33,12 +30,23 @@
   left: 0;
 }
 .next {
-  grid-column: 3/-1;
   right: 0;
 }
 
 @media (min-width: 768px) {
-  .animated-div {
+  .image-wrapper {
+    /* display: unset; */
+    min-height: 500px;
+    width: unset;
+    max-width: 100%;
+    position: unset;
+  }
+
+  .gatsby-img {
+    display: unset;
+    align-self: unset;
+
+    position: unset;
   }
 }
 @media (min-width: 80rem) {

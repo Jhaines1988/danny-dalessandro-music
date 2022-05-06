@@ -15,7 +15,7 @@ const variants = {
   },
   center: {
     zIndex: 1,
-    // x: 0,
+    x: 0,
     opacity: 1,
   },
   exit: (direction) => {
@@ -66,7 +66,13 @@ const ImageCarousel = ({ cloudinaryImages }) => {
   return (
     <>
       <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
-        <motion.div className={styles.imageWrapper}>
+        <div
+          className={styles.imageWrapper}
+          // variants={variants}
+          // initial='enter'
+          // animate='center'
+          // exit='exit'>
+        >
           <button className={styles.prev} onClick={() => paginate(-1)}>
             <FontAwesomeIcon
               title='previous image in carousel'
@@ -88,12 +94,12 @@ const ImageCarousel = ({ cloudinaryImages }) => {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={1}
             transition={{
-              // x: { type: 'spring', stiffness: 100, damping: 30 },
-              opacity: { duration: 0.9 },
+              x: { type: 'tween', stiffness: 100, damping: 30 },
+              opacity: { duration: 0.1 },
             }}
             onDragEnd={(e, { offset, velocity }) => {
               const swipe = swipePower(offset.x, velocity.x);
-
+              // console.log(swipe);
               if (swipe < -swipeConfidenceThreshold) {
                 paginate(1);
               } else if (swipe > swipeConfidenceThreshold) {
@@ -109,7 +115,7 @@ const ImageCarousel = ({ cloudinaryImages }) => {
               fixedWidth
             />
           </button>
-        </motion.div>
+        </div>
       </AnimatePresence>
     </>
   );

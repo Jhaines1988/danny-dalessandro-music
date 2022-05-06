@@ -4,11 +4,10 @@
   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
 }
 
-/* @media (min-width: 64rem) {
+/* @media (min-width: 768px) {
   .about-layout {
-    grid: 100px auto / 1fr 1fr;
+    grid: 100px auto / 1fr;
     column-gap: 8px;
-
   }
 } */
 @media (min-width: 80rem) {

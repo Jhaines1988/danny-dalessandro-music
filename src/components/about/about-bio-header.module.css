@@ -7,14 +7,14 @@ h2.header {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   h1.header {
     font-size: 36px;
   }
   h2.header {
     font-size: 36px;
   }
-}
+} */
 
 @media (min-width: 80rem) {
   h1.header {
