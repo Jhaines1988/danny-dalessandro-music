@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
 import { library, icon } from '@fortawesome/fontawesome-svg-core';
@@ -14,7 +15,7 @@ const variants = {
   },
   center: {
     zIndex: 1,
-    // x: 0,
+    x: 0,
     opacity: 1,
   },
   exit: (direction) => {
@@ -46,51 +47,55 @@ const ImageCarousel = ({ cloudinaryImages }) => {
   return (
     <>
       <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
-        <div className={styles.animatedDiv}>
-          <div className={styles.imageWrapper}>
-            <button className={styles.prev} onClick={() => paginate(-1)}>
-              {/* <FontAwesomeIcon
-                title='previous image in carousel'
-                icon={chevronLeft}
-                size='2xl'
-                fixedWidth
-              /> */}
-            </button>
-            <motion.img
-              className={styles.gatsbyImg}
-              key={page}
-              src={cloudinaryImages[imageIndex].secure_url}
-              custom={direction}
-              variants={variants}
-              initial='enter'
-              animate='center'
-              exit='exit'
-              drag='x'
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              transition={{
-                // x: { type: 'spring', stiffness: 100, damping: 30 },
-                opacity: { duration: 0.9 },
-              }}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
-
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
+        <div
+          className={styles.imageWrapper}
+          // variants={variants}
+          // initial='enter'
+          // animate='center'
+          // exit='exit'>
+        >
+          {/* <button className={styles.prev} onClick={() => paginate(-1)}>
+            <FontAwesomeIcon
+              title='previous image in carousel'
+              icon={chevronLeft}
+              size='2xl'
+              fixedWidth
             />
-            <button className={styles.next} onClick={() => paginate(1)}>
-              {/* <FontAwesomeIcon
-                title='next image in carousel'
-                icon={chevronRight}
-                size='2xl'
-                fixedWidth
-              /> */}
-            </button>
-          </div>
+          </button> */}
+          <motion.img
+            className={styles.gatsbyImg}
+            key={page}
+            src={cloudinaryImages[imageIndex].secure_url}
+            custom={direction}
+            variants={variants}
+            initial='enter'
+            animate='center'
+            exit='exit'
+            drag='x'
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            transition={{
+              x: { type: 'tween', stiffness: 100, damping: 30 },
+              opacity: { duration: 0.1 },
+            }}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+              // console.log(swipe);
+              if (swipe < -swipeConfidenceThreshold) {
+                paginate(1);
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(-1);
+              }
+            }}
+          />
+          {/* <button className={styles.next} onClick={() => paginate(1)}>
+            <FontAwesomeIcon
+              title='next image in carousel'
+              icon={chevronRight}
+              size='2xl'
+              fixedWidth
+            />
+          </button> */}
         </div>
       </AnimatePresence>
     </>
