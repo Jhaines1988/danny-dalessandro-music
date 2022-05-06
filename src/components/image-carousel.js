@@ -73,14 +73,14 @@ const ImageCarousel = ({ cloudinaryImages }) => {
           // animate='center'
           // exit='exit'>
         >
-          <button className={styles.prev} onClick={() => paginate(-1)}>
+          {/* <button className={styles.prev} onClick={() => paginate(-1)}>
             <FontAwesomeIcon
               title='previous image in carousel'
               icon={chevronLeft}
               size='2xl'
               fixedWidth
             />
-          </button>
+          </button> */}
           <motion.img
             className={styles.gatsbyImg}
             key={page}
@@ -107,14 +107,14 @@ const ImageCarousel = ({ cloudinaryImages }) => {
               }
             }}
           />
-          <button className={styles.next} onClick={() => paginate(1)}>
+          {/* <button className={styles.next} onClick={() => paginate(1)}>
             <FontAwesomeIcon
               title='next image in carousel'
               icon={chevronRight}
               size='2xl'
               fixedWidth
             />
-          </button>
+          </button> */}
         </div>
       </AnimatePresence>
     </>
