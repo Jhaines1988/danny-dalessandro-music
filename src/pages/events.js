@@ -28,12 +28,16 @@ const EventsPage = ({ data }) => {
     </Layout>
   );
 };
+
 export const query = graphql`
   {
     contentfulEventsPageMainHeader(isMainHeader: { eq: true }) {
       header
     }
-    allContentfulEventInformation(filter: { isIncluded: { eq: true } }) {
+    allContentfulEventInformation(
+      filter: { isIncluded: { eq: true } }
+      sort: { fields: order }
+    ) {
       edges {
         node {
           description {

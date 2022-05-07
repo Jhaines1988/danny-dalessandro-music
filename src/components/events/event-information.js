@@ -22,16 +22,16 @@ const EventInformation = ({
           image={gatsbyImage.gatsbyImageData}
         />
       )} */}
-      <div>
-        {cloudinaryImage &&
-          cloudinaryImage.map((image, i) => (
-            <img
-              className={styles.cloudinaryImage}
-              src={image.secure_url}
-              key={i}
-            />
-          ))}
-      </div>
+      {/* <div className={styles.imageContainer}> */}
+      {cloudinaryImage &&
+        cloudinaryImage.map((image, i) => (
+          <img
+            className={styles.cloudinaryImage}
+            src={image.secure_url}
+            key={i}
+          />
+        ))}
+      {/* </div> */}
     </div>
   );
 };

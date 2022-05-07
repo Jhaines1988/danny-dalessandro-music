@@ -10,7 +10,6 @@ img {
   display: block;
   width: 100%;
 }
-
 h1,
 h2,
 h3,
@@ -34,7 +33,7 @@ a.active {
   font-weight: var(--bold);
 }
 body {
-  background-color: rgb(160, 124, 124);
+  background-color: rgb(184, 64, 64);
   font-size: var(--text-md);
   font-weight: 400;
   color: white;

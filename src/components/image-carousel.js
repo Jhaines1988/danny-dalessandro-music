@@ -63,7 +63,7 @@ const ImageCarousel = ({ cloudinaryImages }) => {
             />
           </button> */}
           <motion.img
-            className={styles.gatsbyImg}
+            className={styles.cloudinaryImg}
             key={page}
             src={cloudinaryImages[imageIndex].secure_url}
             custom={direction}
