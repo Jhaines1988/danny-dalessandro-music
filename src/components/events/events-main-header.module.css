@@ -1,0 +1,8 @@
+.events-main-header {
+  text-align: center;
+  font-size: clamp(3.5rem, 6vw, 5rem);
+}
+
+.events-main-header p {
+  margin: 0;
+}

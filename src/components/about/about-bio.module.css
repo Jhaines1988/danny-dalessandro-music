@@ -1,14 +1,14 @@
 .body {
+  font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.6rem);
 }
 
-div:first-of-type p {
-  font-size: 20px;
+div.body > p {
 }
 
 @media (min-width: 768px) {
-  div.body > p {
+  /* div.body > p {
     font-size: 22px;
-  }
+  } */
 }
 
 @media (min-width: 80rem) {
@@ -21,18 +21,18 @@ div:first-of-type p {
   } */
 }
 @media (min-width: 100rem) {
-  div.body > p {
+  /* div.body > p {
     font-size: 26px;
-  }
+  } */
 }
 
 @media (min-width: 120rem) {
-  div.body > p {
+  /* div.body > p {
     font-size: 30px;
-  }
+  } */
 }
 @media (min-width: 140rem) {
-  div.body > p {
+  /* div.body > p {
     font-size: 34px;
-  }
+  } */
 }
