@@ -26,7 +26,7 @@ module.exports = {
   siteMetadata: {
     title: `Danny D'Alessandro Music`,
     description: `Hire Professional Musician Danny D'Alessandro. Performer, Singer-Songwriter, Multi-instrumentalst and Band available for hire. Available for special events, weddings, parties, and anything else that you need music for in Telluride, Colorado`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://dannydalessandromusicmaster.gtsb.io/`,
   },
   plugins: [
     {

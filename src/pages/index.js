@@ -1,16 +1,19 @@
 import * as React from 'react';
 import Home from '../components/home';
 import Layout from '../components/layout';
-
+import Seo from '../components/Seo';
 import { graphql } from 'gatsby';
 // styles
 
 // markup
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
-      <Home />
-    </Layout>
+    <>
+      <Seo />
+      <Layout>
+        <Home />
+      </Layout>
+    </>
   );
 };
 
