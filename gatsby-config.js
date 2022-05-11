@@ -97,7 +97,7 @@ module.exports = {
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         // This folder will be created if it doesn’t exist.
-        uploadFolder: 'gatsby-cloudinary',
+        uploadFolder: 'Danny',
       },
     },
     {

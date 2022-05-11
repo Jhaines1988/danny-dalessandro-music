@@ -26,7 +26,6 @@ const Seo = (props) => {
       <title>{title}</title>
       <meta name='description' content={description} />
       <link href={siteUrl} />
-
       <meta property='og:url' content={siteUrl} />
       <meta property='og:type' content='website' />
       <meta property='og:title' content={title} />

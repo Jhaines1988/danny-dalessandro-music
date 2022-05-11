@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
-import { library, icon } from '@fortawesome/fontawesome-svg-core';
+import { icon } from '@fortawesome/fontawesome-svg-core';
 import * as styles from './image-carousel.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../utils/font-awesome';
 const variants = {
   enter: (direction) => {
@@ -46,7 +46,7 @@ const ImageCarousel = ({ cloudinaryImages }) => {
 
   return (
     <>
-      <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
+      <AnimatePresence initial={false} custom={direction}>
         <div
           className={styles.imageWrapper}
           // variants={variants}

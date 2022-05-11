@@ -1,26 +1,27 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import AboutHeader from '../components/about/about-bio-header';
-import AboutBio from '../components/about/about-bio';
-import AboutHero from '../components/about/about-hero';
-import AboutLayout from '../components/about/about-layout';
-import InspiredContainer from '../components/about/inspired-container';
 
+import AboutLayout from '../components/about/about-layout';
+// import InspiredContainer from '../components/about/inspired-container';
+import HeroContainer from '../components/about/hero-container';
 const AboutPage = ({ data }) => {
   const aboutData = data.allContentfulMusician.nodes[0];
   const mainHeader = aboutData.mainHeader;
   const bioText = aboutData.bio.childMarkdownRemark.html;
   const heroImage =
     aboutData.heroImage.childContentfulHeroImagesHeroJsonNode.secure_url;
-  const inspiredData = data.allContentfulInspiredText.nodes;
+  // const inspiredData = data.allContentfulInspiredText.nodes;
 
   return (
     <AboutLayout>
-      <AboutHeader headerText={mainHeader} />
-      <AboutHero hero={heroImage} />
-      <AboutBio bioText={bioText} />
+      <HeroContainer
+        headerText={mainHeader}
+        hero={heroImage}
+        bioText={bioText}
+      />
+      {/*
       <AboutHeader headerText='Inspired By...' as='h2' />
-      <InspiredContainer inspiredTextArray={inspiredData} />
+      <InspiredContainer inspiredTextArray={inspiredData} /> */}
     </AboutLayout>
   );
 };

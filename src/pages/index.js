@@ -2,7 +2,7 @@ import * as React from 'react';
 import Home from '../components/home';
 import Layout from '../components/layout';
 import Seo from '../components/Seo';
-import { graphql } from 'gatsby';
+
 // styles
 
 // markup

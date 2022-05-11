@@ -1,0 +1,15 @@
+@media (min-width: 700px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+@media (min-width: 1200px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: minmax(45rem, 2fr) 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 2%;
+  }
+}
