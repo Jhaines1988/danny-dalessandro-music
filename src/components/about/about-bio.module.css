@@ -11,7 +11,7 @@
 @media (min-width: 700px) {
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .about-bio-container {
     grid-row: 2/3;
     grid-column: 1/2;
