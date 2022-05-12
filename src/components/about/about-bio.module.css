@@ -1,38 +1,24 @@
+.about-bio-container {
+  grid-column: span 2;
+  font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
+}
+
 .body {
-  font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.6rem);
+  /* font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem); */
+  /* font-size: clamp(1rem, 0.6087rem + 1.7391vw, 2rem); */
 }
 
-div.body > p {
+@media (min-width: 700px) {
 }
 
-@media (min-width: 768px) {
-  /* div.body > p {
-    font-size: 22px;
-  } */
-}
-
-@media (min-width: 80rem) {
-  .body {
+@media (min-width: 1280px) {
+  .about-bio-container {
     grid-row: 2/3;
     grid-column: 1/2;
   }
-  /* div.body > p {
-    font-size: 28px;
-  } */
-}
-@media (min-width: 100rem) {
-  /* div.body > p {
-    font-size: 26px;
-  } */
-}
 
-@media (min-width: 120rem) {
-  /* div.body > p {
-    font-size: 30px;
-  } */
-}
-@media (min-width: 140rem) {
-  /* div.body > p {
-    font-size: 34px;
-  } */
+  .body {
+    /* grid-row: 2/3;
+    grid-column: 1/2; */
+  }
 }

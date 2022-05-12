@@ -2,29 +2,37 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 import * as styles from './about-hero.module.css';
 import { graphql, useStaticQuery } from 'gatsby';
-
 const AboutHero = ({ hero }) => {
   const data = useStaticQuery(graphql`
     {
       contentfulMusician(isDanny: { eq: true }) {
         heroImage {
           gatsbyHero {
-            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: AUTO
+              layout: CONSTRAINED
+              width: 800
+              cornerRadius: 10
+              aspectRatio: 1
+            )
           }
         }
       }
     }
   `);
-  // Hero = Cloudinary data
+
   const image = data.contentfulMusician.heroImage.gatsbyHero.gatsbyImageData;
   return (
-    // <div className={styles.imageContainer}>
-    // <img src={hero} className={styles.heroImage} />
-    <GatsbyImage image={image} className={styles.heroImage} />
-    // </div>
+    <figure className={styles.imageContainer}>
+      <GatsbyImage
+        image={image}
+        className={styles.heroImage}
+        alt='Danny playing the saxophone on stage. Image is modified to create a blue tint'
+      />
+      {/* <figcaption>Danny Playing Sax</figcaption> */}
+    </figure>
   );
 };
-{
-  /* <GbiBridged image={image} /> */
-}
+
 export default AboutHero;

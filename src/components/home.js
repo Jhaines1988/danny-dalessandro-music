@@ -3,7 +3,6 @@ import * as styles from './home.module.css';
 
 import { navigate } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
-import { getImage, GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 import VideoBanner from './videobanner';
 const Home = () => {

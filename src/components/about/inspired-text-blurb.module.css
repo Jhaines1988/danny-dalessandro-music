@@ -1,27 +1,24 @@
 .body {
-  grid-row: 1/2;
+  /* grid-row: 1/2; */
 }
 
 div.body > p {
   font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.6rem);
 }
 @media (min-width: 768px) {
-  .body {
+  /* .body {
     grid-row: unset;
     display: flex;
     flex-direction: column;
     margin: 1rem;
     justify-content: center;
-  }
-  /* div.body > p {
-    font-size: 22px;
   } */
 }
 
 @media (min-width: 80rem) {
-  .body {
+  /* .body {
     grid-row: unset;
-  }
+  } */
 }
 
 @media (min-width: 100rem) {

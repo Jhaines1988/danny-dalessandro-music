@@ -1,5 +1,10 @@
+.events-extras-container {
+  font-size: clamp(1.2rem, 1.0495rem + 0.6882vw, 1.6rem);
+}
+
 .body {
-  font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
+  /* font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem); */
+  /* font-size: clamp(1rem, 0.0591rem + 4.3011vw, 3.5rem); */
 }
 
 div.body h1 {
@@ -7,4 +12,9 @@ div.body h1 {
 }
 
 @media (min-width: 768px) {
+}
+@media (min-width: 1280px) {
+  div.body h1 {
+    text-align: left;
+  }
 }
