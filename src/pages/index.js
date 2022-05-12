@@ -2,6 +2,7 @@ import * as React from 'react';
 import Home from '../components/home';
 import Layout from '../components/layout';
 import Seo from '../components/Seo';
+import HomeLayout from '../components/home/home-layout';
 
 // styles
 
@@ -10,9 +11,9 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Seo />
-      <Layout>
+      <HomeLayout>
         <Home />
-      </Layout>
+      </HomeLayout>
     </>
   );
 };

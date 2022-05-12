@@ -1,8 +1,21 @@
 import React from 'react';
-
+import { graphql, useStaticQuery } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import * as styles from './gbi-bridged.module.css';
-const GbiBridged = function ({ image, ...props }) {
+const GbiBridged = function ({ ...props }) {
+  const data = useStaticQuery(graphql`
+    {
+      contentfulHeroImages(isHomePageHero: { eq: true }) {
+        id
+        gatsbyHero {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
+        }
+      }
+    }
+  `);
+
+  const image = getImage(data.contentfulHeroImages.gatsbyHero);
   return (
     <BgImage
       alt="Danny D'Alessandro"
