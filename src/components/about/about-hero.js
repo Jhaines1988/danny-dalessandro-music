@@ -12,7 +12,7 @@ const AboutHero = ({ hero }) => {
               placeholder: BLURRED
               formats: AUTO
               layout: CONSTRAINED
-              width: 1000
+              width: 800
               cornerRadius: 10
               aspectRatio: 1
             )
