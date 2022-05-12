@@ -6,14 +6,16 @@ const EventsMainHeader = ({ header }) => {
   const split = header.split('.');
 
   return (
-    <h1 className={styles.eventsMainHeader}>
-      {/* {header} */}
-      <p> {split[0] + '.'} </p>
+    <div className={styles.headerContainer}>
+      <h1 className={styles.eventsMainHeader}>
+        {header}
+        {/* <p> {split[0] + '.'} </p>
 
-      <p> {split[1] + '.'}</p>
+<p> {split[1] + '.'}</p>
 
-      <p> {split[2] + '.'}</p>
-    </h1>
+<p> {split[2] + '.'}</p> */}
+      </h1>
+    </div>
   );
 };
 

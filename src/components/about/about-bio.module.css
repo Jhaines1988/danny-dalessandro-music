@@ -1,15 +1,24 @@
-.body {
-  font-size: clamp(1.1rem, 0.153rem + 1.368vw, 1.48rem);
-  /* font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem); */
+.about-bio-container {
   grid-column: span 2;
+  font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
+}
+
+.body {
+  /* font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem); */
+  /* font-size: clamp(1rem, 0.6087rem + 1.7391vw, 2rem); */
 }
 
 @media (min-width: 700px) {
 }
 
 @media (min-width: 1200px) {
-  .body {
+  .about-bio-container {
     grid-row: 2/3;
     grid-column: 1/2;
+  }
+
+  .body {
+    /* grid-row: 2/3;
+    grid-column: 1/2; */
   }
 }

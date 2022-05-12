@@ -7,7 +7,6 @@ const EventInformation = ({
   gatsbyImage,
   ...props
 }) => {
-  console.log(cloudinaryImage);
   return (
     <div className={styles.eventInformationContainer}>
       <div
@@ -16,22 +15,13 @@ const EventInformation = ({
           __html: eventDescription,
         }}
       />
-      {/* {gatsbyImage && (
+      {gatsbyImage && (
         <GatsbyImage
+          alt=''
           className={styles.gatsbyImage}
           image={gatsbyImage.gatsbyImageData}
         />
-      )} */}
-      {/* <div className={styles.imageContainer}> */}
-      {cloudinaryImage &&
-        cloudinaryImage.map((image, i) => (
-          <img
-            className={styles.cloudinaryImage}
-            src={image.secure_url}
-            key={i}
-          />
-        ))}
-      {/* </div> */}
+      )}
     </div>
   );
 };

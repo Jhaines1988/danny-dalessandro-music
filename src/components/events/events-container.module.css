@@ -1,0 +1,7 @@
+@media (min-width: 1280px) {
+  .events-container {
+    display: grid;
+    gap: 3%;
+    align-content: center;
+  }
+}

@@ -4,27 +4,28 @@ import Layout from '../components/layout';
 import EventInformation from '../components/events/event-information';
 import EventsMainHeader from '../components/events/events-main-header';
 import EventsExtras from '../components/events/event-extras';
+import EventsContainer from '../components/events/events-container';
 const EventsPage = ({ data }) => {
   const mainHeader = data.contentfulEventsPageMainHeader.header;
   const eventDescriptionNodes = data.allContentfulEventInformation.edges;
   const eventExtrasText =
     data.contentfulEventsExtras.description.childMarkdownRemark.html;
-
-  console.log(eventDescriptionNodes);
   return (
     <Layout>
       <EventsMainHeader header={mainHeader} />
-      {eventDescriptionNodes.map((descriptionNode, i) => (
-        <EventInformation
-          key={i}
-          eventDescription={
-            descriptionNode.node.description.childMarkdownRemark.html
-          }
-          cloudinaryImage={descriptionNode.node.cloudinaryImage}
-          gatsbyImage={descriptionNode.node.gatsbyImage}
-        />
-      ))}
-      <EventsExtras eventExtrasText={eventExtrasText} />
+      <EventsContainer>
+        {eventDescriptionNodes.map((descriptionNode, i) => (
+          <EventInformation
+            key={i}
+            eventDescription={
+              descriptionNode.node.description.childMarkdownRemark.html
+            }
+            cloudinaryImage={descriptionNode.node.cloudinaryImage}
+            gatsbyImage={descriptionNode.node.gatsbyImage}
+          />
+        ))}
+        <EventsExtras eventExtrasText={eventExtrasText} />
+      </EventsContainer>
     </Layout>
   );
 };
@@ -51,7 +52,7 @@ export const query = graphql`
           gatsbyImage {
             gatsbyImageData(
               layout: CONSTRAINED
-              width: 400
+              width: 600
               placeholder: TRACED_SVG
               formats: AUTO
             )

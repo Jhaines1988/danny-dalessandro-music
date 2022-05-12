@@ -12,9 +12,9 @@ const AboutHero = ({ hero }) => {
               placeholder: BLURRED
               formats: AUTO
               layout: CONSTRAINED
-              width: 800
+              width: 1000
               cornerRadius: 10
-              resizingBehavior: SCALE
+              aspectRatio: 1
             )
           }
         }
@@ -24,11 +24,14 @@ const AboutHero = ({ hero }) => {
 
   const image = data.contentfulMusician.heroImage.gatsbyHero.gatsbyImageData;
   return (
-    <GatsbyImage
-      image={image}
-      className={styles.heroImage}
-      alt='Danny playing the saxophone on stage. Image is modified to create a blue tint'
-    />
+    <figure className={styles.imageContainer}>
+      <GatsbyImage
+        image={image}
+        className={styles.heroImage}
+        alt='Danny playing the saxophone on stage. Image is modified to create a blue tint'
+      />
+      {/* <figcaption>Danny Playing Sax</figcaption> */}
+    </figure>
   );
 };
 

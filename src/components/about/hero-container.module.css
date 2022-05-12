@@ -8,7 +8,6 @@
 @media (min-width: 1200px) {
   .hero-container {
     display: grid;
-    grid-template-columns: minmax(45rem, 2fr) 1fr;
     grid-template-rows: repeat(2, auto);
     gap: 2%;
   }
