@@ -1,5 +1,6 @@
 import React from 'react';
 import * as styles from './home.module.css';
+import { navigate } from 'gatsby';
 const Home = () => {
   // const data = useStaticQuery(graphql`
   //   {
@@ -24,22 +25,23 @@ const Home = () => {
       <div className={styles.heroTextContainer}>
         <h1 className={styles.logoAnimation}>Danny D'Alessandro Music</h1>
 
-        <ul className={styles.list}>
+        {/* <ul className={styles.list}>
           <li className={styles.listItem}>Multi-Instrumentalist</li>
           <li className={styles.listItem}>Singer-Songwriter</li>
           <li className={styles.listItem}>Studio Musician</li>
           <li className={styles.listItem}>Arranger</li>
-        </ul>
-        {/* <button
+        </ul> */}
+        {/*
+        <button
           className={styles.contactButton}
           onClick={() => {
             navigate('/contact');
           }}>
           Contact
         </button> */}
+        {/* </div> */}
       </div>
     </div>
-    // </div>
   );
 };
 

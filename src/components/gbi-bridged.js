@@ -9,7 +9,7 @@ const GbiBridged = function ({ ...props }) {
       contentfulHeroImages(isHomePageHero: { eq: true }) {
         id
         gatsbyHero {
-          gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
+          gatsbyImageData(placeholder: TRACED_SVG, layout: FULL_WIDTH)
         }
       }
     }
@@ -21,8 +21,13 @@ const GbiBridged = function ({ ...props }) {
       alt="Danny D'Alessandro"
       ariaLabel="Danny D'Alessandro"
       image={image}
-      style={props.style ? props.style : null}
-      className={props.style ? null : styles.backgroundHeroImage}>
+      // style={{
+      //   // Defaults are overwrite-able by setting one or each of the following:
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat',
+      // }}
+      className={styles.backgroundHeroImage}>
       {props.children}
     </BgImage>
   );

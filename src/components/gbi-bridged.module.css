@@ -1,8 +1,20 @@
-.background-hero-image {
-}
-
-/* @media (min-width: 768px) {
-  .background-hero-image {
-    max-width: 100%;
+@media (min-width: 1280px) {
+  .background-hero-image,
+  .background-hero-image::before,
+  .background-hero-image::after {
+    background-attachment: fixed;
+    background-position: right bottom !important;
   }
-} */
+
+  .background-hero-image:before {
+    /* background-position: right !important; */
+  }
+}
+@media (min-width: 1800px) {
+  .background-hero-image,
+  .background-hero-image::before,
+  .background-hero-image::after {
+    background-attachment: fixed;
+    background-position: center top !important;
+  }
+}
