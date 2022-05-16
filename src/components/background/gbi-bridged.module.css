@@ -1,0 +1,21 @@
+@media (min-width: 1280px) {
+  .background-hero-image,
+  .background-hero-image::before,
+  .background-hero-image::after {
+    background-attachment: fixed;
+
+    background-size: cover;
+  }
+
+  .background-hero-image:before {
+  }
+}
+/*
+@media (min-width: 1800px) {
+  .background-hero-image,
+  .background-hero-image::before,
+  .background-hero-image::after {
+    background-attachment: fixed;
+    background-position: center top !important;
+  }
+} */
