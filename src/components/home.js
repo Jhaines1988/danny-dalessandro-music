@@ -1,47 +1,26 @@
 import React from 'react';
 import * as styles from './home.module.css';
 import { navigate } from 'gatsby';
+import BackgroundStatic from './background/background-static';
+
 const Home = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     contentfulHeroImages(isHomePageHero: { eq: true }) {
-  //       id
-  //       gatsbyHero {
-  //         gatsbyImageData(
-  //           layout: CONSTRAINED
-  //           width: 2500
-  //           cropFocus: TOP
-  //           placeholder: TRACED_SVG
-  //         )
-  //       }
-  //     }
-  //   }
-  // `);
-
-  // const image = getImage(data.contentfulHeroImages.gatsbyHero);
-
   return (
-    <div className={styles.outerContainer}>
-      <div className={styles.heroTextContainer}>
-        <h1 className={styles.logoAnimation}>Danny D'Alessandro Music</h1>
-
-        {/* <ul className={styles.list}>
-          <li className={styles.listItem}>Multi-Instrumentalist</li>
-          <li className={styles.listItem}>Singer-Songwriter</li>
-          <li className={styles.listItem}>Studio Musician</li>
-          <li className={styles.listItem}>Arranger</li>
-        </ul> */}
-        {/*
+    <BackgroundStatic>
+      <div className={styles.homePageHeadlines}>
+        <h1 className={styles.mainHeader}> Danny D'Alessandro</h1>
+        <h2 className={styles.subHeader}>
+          {' '}
+          Multi-Instrumentalist | Singer-Songwriter | Arranger
+        </h2>
         <button
           className={styles.contactButton}
           onClick={() => {
             navigate('/contact');
           }}>
-          Contact
-        </button> */}
-        {/* </div> */}
+          Book Now
+        </button>
       </div>
-    </div>
+    </BackgroundStatic>
   );
 };
 

@@ -21,12 +21,12 @@ const GbiBridged = function ({ ...props }) {
       alt="Danny D'Alessandro"
       ariaLabel="Danny D'Alessandro"
       image={image}
-      // style={{
-      //   // Defaults are overwrite-able by setting one or each of the following:
-      //   backgroundSize: 'cover',
-      //   backgroundPosition: 'center',
-      //   backgroundRepeat: 'no-repeat',
-      // }}
+      style={
+        {
+          // minHeight: '100vh',
+          // minWidth: '100vw',
+        }
+      }
       className={styles.backgroundHeroImage}>
       {props.children}
     </BgImage>

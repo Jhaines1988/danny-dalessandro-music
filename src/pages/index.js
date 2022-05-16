@@ -3,7 +3,8 @@ import Home from '../components/home';
 import Layout from '../components/layout';
 import Seo from '../components/Seo';
 import HomeLayout from '../components/home/home-layout';
-
+import HomeLayoutStatic from '../components/home/home-layout-static';
+import HomeAboutSection from '../components/home/home-about-section';
 // styles
 
 // markup
@@ -13,6 +14,7 @@ const IndexPage = ({ data }) => {
       <Seo />
       <HomeLayout>
         <Home />
+        <HomeAboutSection />
       </HomeLayout>
     </>
   );
