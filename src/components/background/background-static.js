@@ -15,13 +15,14 @@ const BackgroundStatic = (props) => {
         }}
         layout='fullWidth'
         // You can optionally force an aspect ratio for the generated image
-        aspectRatio={16 / 9}
+        aspectRatio={1}
         // This is a presentational image, so the alt should be an empty string
         alt=''
         // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
         src={
           // '../../images/priscilla-du-preez-NEXmx_EI9j0-unsplash.jpg'
           '../../images/banjo-stock-cropped_h9fzsf-Blurred.jpg'
+
           // 'https://res.cloudinary.com/dli2yq8fm/image/upload/t_Blurred/v1652406782/Danny/banjo-stock-cropped_h9fzsf.jpg'
         }
         formats={['auto', 'webp', 'avif']}

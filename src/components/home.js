@@ -5,7 +5,7 @@ import BackgroundStatic from './background/background-static';
 
 const Home = () => {
   return (
-    <BackgroundStatic>
+    <BackgroundStatic home={true}>
       <div className={styles.homePageHeadlines}>
         <h1 className={styles.mainHeader}> Danny D'Alessandro</h1>
         <h2 className={styles.subHeader}>

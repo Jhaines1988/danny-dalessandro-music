@@ -10,6 +10,7 @@
 .gatsby-images1,
 .gatsby-images2 {
   max-width: 600px;
+  margin: 2rem;
 }
 .home-about-text {
   order: 1;

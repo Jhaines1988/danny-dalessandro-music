@@ -1,0 +1,16 @@
+.outer-container {
+  display: grid;
+}
+
+.main-container {
+  grid-area: 1/1;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 1280px) {
+  .main-container {
+    align-items: start;
+  }
+}
