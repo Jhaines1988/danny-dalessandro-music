@@ -23,9 +23,7 @@ export default function HomeAboutSection(props) {
     }
   `);
   const imageNodes = data.allContentfulHeroImages.edges;
-
-  const [image1, image2] = data.allContentfulHeroImages.edges;
-
+  const [image1, image2] = imageNodes;
   const image1Source = image1.node.gatsbyHero.gatsbyImageData;
   const image2Source = image2.node.gatsbyHero.gatsbyImageData;
 
@@ -36,8 +34,10 @@ export default function HomeAboutSection(props) {
         <GatsbyImage image={image2Source} className={styles.gatsbyImages2} />
 
         <p className={styles.homeAboutText}>
-          Danny D'Alessandro is a musician based in Telluride, CO. Danny
-          information information danny stuff about Danny.
+          Danny D’Alessandro is a musician based out of Telluride, CO. His
+          unique choice of instrumentation showcases his versatility. He draws
+          influence from numerous genres and playing styles making him an asset
+          to any project.
         </p>
         <button
           className={styles.homeAboutButton}

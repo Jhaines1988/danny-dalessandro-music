@@ -5,7 +5,7 @@ import icon from '../images/icon.png';
 
 const Navigation = () => {
   return (
-    <div>
+    <div style={{ justifySelf: 'stretch' }}>
       <nav role='navigation' className={styles.container} aria-label='Main'>
         <Link to='/' className={styles.linkLogo}>
           <img className={styles.logo} src={icon} alt='icon' />

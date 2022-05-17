@@ -37,6 +37,7 @@ body {
   font-size: var(--text-md);
   font-weight: 400;
   color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   /* font-weight: ; */
   line-height: var(--default);
   margin: 0;
