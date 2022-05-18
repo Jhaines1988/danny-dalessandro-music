@@ -4,17 +4,6 @@ import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import * as styles from './gbi-bridged.module.css';
 const GbiBridged = function ({ ...props }) {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     contentfulHeroImages(isHomePageHero: { eq: true }) {
-  //       id
-  //       gatsbyHero {
-  //         gatsbyImageData(placeholder: TRACED_SVG, layout: FULL_WIDTH)
-  //       }
-  //     }
-  //   }
-  // `);
-
   const data = useStaticQuery(graphql`
     {
       contentfulBackgroundImages(collectionName: { eq: "Contact-Background" }) {
@@ -25,7 +14,9 @@ const GbiBridged = function ({ ...props }) {
     }
   `);
 
-  const image = getImage(data.contentfulBackgroundImages.backgroundImage);
+  const image = props.image
+    ? getImage(props.image)
+    : getImage(data.contentfulBackgroundImages.backgroundImage);
   // const image = getImage(data.contentfulHeroImages.gatsbyHero);
   return (
     <BgImage

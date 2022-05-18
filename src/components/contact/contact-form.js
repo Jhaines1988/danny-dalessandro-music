@@ -6,7 +6,7 @@ export default function ContactForm(props) {
   const [state, handleSubmit] = useForm('mbjwqqdy');
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Thanks For Getting In Touch! I'll get back to you ASAP</p>;
   }
   return (
     <>
@@ -17,7 +17,7 @@ export default function ContactForm(props) {
         <label htmlFor='lastname'>Last Name</label>
         <input id='lastname' name='lastname' type='text' required={true} />
         <label htmlFor='email'>Email Address</label>
-        <input id='email' type='email' name='email' required={true} />
+        <input id='email' type='email' name='_replyto' required={true} />
         <label htmlFor='subject'>Subject Line</label>
         <input name='subject' id='subject' type='text' required={true} />
         <ValidationError prefix='Email' field='email' errors={state.errors} />
@@ -34,6 +34,7 @@ export default function ContactForm(props) {
           field='message'
           errors={state.errors}
         />
+        <input type='text' name='_gotcha' style={{ display: 'none' }} />
         <button
           type='submit'
           className={styles.submitButton}
