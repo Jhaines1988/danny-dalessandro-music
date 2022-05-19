@@ -1,2 +1,29 @@
 .listen-container {
 }
+
+.main-header {
+  font-size: 18px;
+  border-bottom: 1px solid black;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    font-size: 24px;
+    padding: 3rem 0;
+    text-align: left;
+  }
+}
+@media (min-width: 1280px) {
+  .listen-container {
+    display: grid;
+    justify-content: center;
+  }
+  .main-header {
+  }
+}

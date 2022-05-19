@@ -6,7 +6,11 @@ const BandContainer = function ({ bandName, bandURL, musicVideo, ...props }) {
     <>
       <div className={styles.bandContainer}>
         <label className={styles.label}>{bandName}</label>
-
+        {bandURL && (
+          <a className={styles.bandLink} href={bandURL}>
+            ABOUT THE BAND
+          </a>
+        )}
         {musicVideo &&
           musicVideo.map((video, i) => {
             return (
@@ -24,11 +28,6 @@ const BandContainer = function ({ bandName, bandURL, musicVideo, ...props }) {
               </div>
             );
           })}
-        {bandURL && (
-          <a className={styles.bandLink} href={bandURL}>
-            Learn More About {bandName}
-          </a>
-        )}
       </div>
     </>
   );
