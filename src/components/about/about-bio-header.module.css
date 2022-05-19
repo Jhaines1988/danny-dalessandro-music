@@ -1,6 +1,7 @@
 h1.header {
   text-align: center;
   font-size: clamp(2rem, 0.7153rem + 1.6368vw, 5rem);
+  letter-spacing: 0.07em;
 }
 
 h2.header {
@@ -16,8 +17,11 @@ h2.header {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   h1.header {
     justify-self: left;
+    font-size: 60px;
+    margin-bottom: 0;
+    line-height: 68px;
   }
 }
