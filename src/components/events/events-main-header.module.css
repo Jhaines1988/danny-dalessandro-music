@@ -1,11 +1,35 @@
 .header-container {
   font-size: clamp(1.1rem, -0.19rem + 5.9vw, 3.5rem);
+  color: white;
 }
 
 .events-main-header {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
   text-align: center;
+  letter-spacing: 0.07em;
 }
 
 .events-main-header p {
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .events-main-header {
+    font-size: 44px;
+    padding: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .events-main-header {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.07em;
+  }
 }

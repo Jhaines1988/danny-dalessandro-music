@@ -1,7 +1,5 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-
-import banjo from '../../images/priscilla-du-preez-NEXmx_EI9j0-unsplash.jpg';
 const BackgroundStatic = (props) => {
   return (
     <div style={{ display: 'grid' }}>

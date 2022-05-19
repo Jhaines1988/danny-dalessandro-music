@@ -5,14 +5,14 @@ import EventInformation from '../components/events/event-information';
 import EventsMainHeader from '../components/events/events-main-header';
 import EventsExtras from '../components/events/event-extras';
 import EventsContainer from '../components/events/events-container';
+import EventsLayout from '../components/events/events-layout';
 const EventsPage = ({ data }) => {
   const mainHeader = data.contentfulEventsPageMainHeader.header;
   const eventDescriptionNodes = data.allContentfulEventInformation.edges;
   const eventExtrasText =
     data.contentfulEventsExtras.description.childMarkdownRemark.html;
   return (
-    <Layout>
-      <EventsMainHeader header={mainHeader} />
+    <EventsLayout header={mainHeader}>
       <EventsContainer>
         {eventDescriptionNodes.map((descriptionNode, i) => (
           <EventInformation
@@ -26,7 +26,7 @@ const EventsPage = ({ data }) => {
         ))}
         <EventsExtras eventExtrasText={eventExtrasText} />
       </EventsContainer>
-    </Layout>
+    </EventsLayout>
   );
 };
 

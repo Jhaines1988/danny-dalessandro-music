@@ -61,6 +61,8 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    max-width: 1280px;
+    width: 100%;
   }
   .label {
     padding-top: 2rem;

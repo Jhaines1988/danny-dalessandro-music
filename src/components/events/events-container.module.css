@@ -3,5 +3,6 @@
     display: grid;
     gap: 3%;
     align-content: center;
+    margin: 4rem 0;
   }
 }

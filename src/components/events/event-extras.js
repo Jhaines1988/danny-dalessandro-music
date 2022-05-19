@@ -1,4 +1,5 @@
 import React from 'react';
+
 import * as styles from './event-extras.module.css';
 const EventsExtras = ({ eventExtrasText }) => {
   return (
