@@ -1,7 +1,7 @@
 @media (min-width: 1280px) {
   .events-container {
     display: grid;
-    gap: 3%;
+    gap: 2%;
     align-content: center;
     margin: 4rem 0;
   }

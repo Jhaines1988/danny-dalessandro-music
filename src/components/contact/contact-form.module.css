@@ -3,11 +3,13 @@
   margin: 0;
   letter-spacing: 0.07em;
   text-align: center;
+  color: white;
 }
 form {
   display: grid;
   justify-content: center;
   gap: 4px;
+  color: white;
 }
 label {
   display: block;
