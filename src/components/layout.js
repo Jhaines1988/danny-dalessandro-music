@@ -4,7 +4,8 @@ import Navigation from './navigation';
 import Container from './container';
 import './variable.css';
 import './global.css';
-
+import '@fontsource/lato';
+import '@fontsource/lato/700.css';
 const Layout = function (props) {
   const { children } = props;
 

@@ -6,30 +6,61 @@ import EventsMainHeader from '../components/events/events-main-header';
 import EventsExtras from '../components/events/event-extras';
 import EventsContainer from '../components/events/events-container';
 import EventsLayout from '../components/events/events-layout';
+import StudioBandInformation from '../components/events/studio-band-information';
 const EventsPage = ({ data }) => {
   const mainHeader = data.contentfulEventsPageMainHeader.header;
-  const eventDescriptionNodes = data.allContentfulEventInformation.edges;
+  const eventDescriptionNode = data.contentfulEventInformation;
   const eventExtrasText =
     data.contentfulEventsExtras.description.childMarkdownRemark.html;
   return (
     <EventsLayout header={mainHeader}>
       <EventsContainer>
-        {eventDescriptionNodes.map((descriptionNode, i) => (
-          <EventInformation
-            key={i}
-            eventDescription={
-              descriptionNode.node.description.childMarkdownRemark.html
-            }
-            cloudinaryImage={descriptionNode.node.cloudinaryImage}
-            gatsbyImage={descriptionNode.node.gatsbyImage}
-          />
-        ))}
+        <EventInformation
+          eventDescription={
+            eventDescriptionNode
+              .childContentfulEventInformationDescriptionTextNode
+              .childMarkdownRemark.html
+          }
+          gatsbyImage={eventDescriptionNode.gatsbyImage}
+        />
+        <StudioBandInformation />
+
         <EventsExtras eventExtrasText={eventExtrasText} />
       </EventsContainer>
     </EventsLayout>
   );
 };
-
+export const query = graphql`
+  {
+    contentfulEventsPageMainHeader(isMainHeader: { eq: true }) {
+      header
+    }
+    contentfulEventInformation(order: { eq: 1 }) {
+      id
+      childContentfulEventInformationDescriptionTextNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      gatsbyImage {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 600
+          placeholder: TRACED_SVG
+          formats: AUTO
+        )
+      }
+    }
+    contentfulEventsExtras(isIncluded: { eq: true }) {
+      description {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+  }
+`;
+/*
 export const query = graphql`
   {
     contentfulEventsPageMainHeader(isMainHeader: { eq: true }) {
@@ -45,9 +76,6 @@ export const query = graphql`
             childMarkdownRemark {
               html
             }
-          }
-          cloudinaryImage {
-            secure_url
           }
           gatsbyImage {
             gatsbyImageData(
@@ -68,5 +96,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`; */
+
 export default EventsPage;
