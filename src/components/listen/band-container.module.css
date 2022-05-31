@@ -22,8 +22,10 @@
   font-family: 'Lato';
   font-style: normal;
   text-transform: uppercase;
-  text-decoration: underline;
   color: #ba6740;
+}
+.band-link:hover {
+  text-decoration: underline;
 }
 .iframe-container {
   position: relative;

@@ -7,7 +7,7 @@ const ListenPage = ({ data }) => {
   const bands = data.allContentfulBand.edges;
 
   return (
-    <Layout>
+    <Layout title="Danny D'Alessandro | Listen">
       <ListenContainer bands={bands} />
     </Layout>
   );

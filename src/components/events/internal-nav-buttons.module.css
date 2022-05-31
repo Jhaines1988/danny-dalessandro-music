@@ -13,7 +13,10 @@
   margin: 0 auto;
   width: 10rem;
 }
-
+.nav-button:hover {
+  cursor: pointer;
+  background-color: #985232;
+}
 @media (min-width: 768px) {
   .nav-button {
     width: 15rem;

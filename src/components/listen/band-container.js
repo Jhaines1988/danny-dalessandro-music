@@ -14,7 +14,7 @@ const BandContainer = function ({ bandName, bandURL, musicVideo, ...props }) {
         {musicVideo &&
           musicVideo.map((video, i) => {
             return (
-              <div className={styles.iframeContainer}>
+              <div key={i} className={styles.iframeContainer}>
                 <Iframe videoURL={video.url} tags={video.tags} />
 
                 {/* note: If user wants to add  description in the future,

@@ -1,19 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import EventInformation from '../components/events/event-information';
-import EventsMainHeader from '../components/events/events-main-header';
-import EventsExtras from '../components/events/event-extras';
-import EventsContainer from '../components/events/events-container';
+
 import EventsLayout from '../components/events/events-layout';
+import EventsContainer from '../components/events/events-container';
+import EventInformation from '../components/events/event-information';
 import StudioBandInformation from '../components/events/studio-band-information';
+import EventsExtras from '../components/events/event-extras';
 const EventsPage = ({ data }) => {
   const mainHeader = data.contentfulEventsPageMainHeader.header;
   const eventDescriptionNode = data.contentfulEventInformation;
   const eventExtrasText =
     data.contentfulEventsExtras.description.childMarkdownRemark.html;
   return (
-    <EventsLayout header={mainHeader}>
+    <EventsLayout title="Danny D'Alessandro | Events" header={mainHeader}>
       <EventsContainer>
         <EventInformation
           eventDescription={
@@ -60,42 +59,5 @@ export const query = graphql`
     }
   }
 `;
-/*
-export const query = graphql`
-  {
-    contentfulEventsPageMainHeader(isMainHeader: { eq: true }) {
-      header
-    }
-    allContentfulEventInformation(
-      filter: { isIncluded: { eq: true } }
-      sort: { fields: order }
-    ) {
-      edges {
-        node {
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-          gatsbyImage {
-            gatsbyImageData(
-              layout: CONSTRAINED
-              width: 600
-              placeholder: TRACED_SVG
-              formats: AUTO
-            )
-          }
-        }
-      }
-    }
-    contentfulEventsExtras(isIncluded: { eq: true }) {
-      description {
-        childMarkdownRemark {
-          html
-        }
-      }
-    }
-  }
-`; */
 
 export default EventsPage;

@@ -13,7 +13,10 @@ form {
 }
 label {
   display: block;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 700;
 }
+
 input,
 textarea {
   padding: 8px;
@@ -35,8 +38,45 @@ button.submit-button {
   margin-top: 1.4rem;
   color: white;
   padding: 0.75rem;
+  text-transform: uppercase;
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+button.submit-button:hover {
+  cursor: pointer;
+  background-color: #985232;
+}
+.succeeded-container {
+}
+.succeeded {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.home-link {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem 0;
+  line-height: 24px;
+  font-family: 'Lato';
+  font-style: normal;
+  text-transform: uppercase;
+  color: white;
+}
+.home-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
+@media (min-width: 400px) {
+  .succeeded-container {
+    display: flex;
+    height: 630px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 @media (min-width: 768px) {
   .header {
     grid-column: span 4;
@@ -74,8 +114,13 @@ button.submit-button {
     height: 180px;
   }
   button.submit-button {
-    height: 2.5rem;
     width: 220px;
+  }
+  .succeeded {
+    font-size: 2rem;
+  }
+  .home-link {
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 1280px) {

@@ -30,8 +30,16 @@ export default function HomeAboutSection(props) {
   return (
     <div className={styles.homeAboutContainer}>
       <div className={styles.homeAboutContent}>
-        <GatsbyImage image={image1Source} className={styles.gatsbyImages1} />
-        <GatsbyImage image={image2Source} className={styles.gatsbyImages2} />
+        <GatsbyImage
+          alt='Danny Playing Banjo'
+          image={image1Source}
+          className={styles.gatsbyImages1}
+        />
+        <GatsbyImage
+          alt='Danny Playing Sax'
+          image={image2Source}
+          className={styles.gatsbyImages2}
+        />
 
         <p className={styles.homeAboutText}>
           Danny D’Alessandro is a musician based out of Telluride, CO. His

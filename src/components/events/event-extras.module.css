@@ -27,7 +27,7 @@ div.body > h1 {
     /* font-size: clamp(1.2rem, 1.0495rem + 0.6882vw, 1.6rem); */
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .events-extras-container a {
     font-weight: 400;
@@ -39,10 +39,13 @@ div.body > h1 {
   }
   div.body {
     font-size: 24px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
   }
   div.body > h1 {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 8rem;
     margin-bottom: 0;
   }
   div.events-extras-container > button {
