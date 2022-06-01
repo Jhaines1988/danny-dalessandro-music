@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import * as styles from './navigation.module.css';
-import icon from '../images/Logo White.png';
+import icon from '../images/icon.png';
 
 const Navigation = () => {
   return (

@@ -13,9 +13,7 @@ const BackgroundStatic = (props) => {
         layout='fullWidth'
         aspectRatio={1}
         alt=''
-        src={
-          '../../images/engin-akyurt-1E-PFrorFUA-unsplash_aqbhtm-light-blur.jpg'
-        }
+        src={'../../images/Sax BG.png'}
         formats={['auto', 'webp', 'avif']}
       />
       <div className={styles.mainContainer}>

@@ -18,7 +18,6 @@
 }
 
 .home-about-button {
-  font-size: inherit;
   border: 1px solid #ffdfae;
   border-radius: 4px;
   background-color: #ba6740;
@@ -30,6 +29,10 @@
   letter-spacing: 2px;
   border: 1px solid #ffdfae;
   margin: 0 24px;
+}
+.home-about-button:hover {
+  background-color: #985232;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {
@@ -59,13 +62,7 @@
   }
 }
 
-@media (min-width: 800px) {
-  .home-about-container {
-  }
-  .home-about-content {
-    /* margin-top: 2rem; */
-  }
-
+@media (min-width: 768px) {
   .gatsby-images1 {
     justify-self: right;
   }
@@ -73,9 +70,13 @@
   .gatsby-images2 {
     justify-self: left;
   }
-  .home-about-text {
-  }
 
   .home-about-button {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .home-about-button {
+    font-size: 2rem;
   }
 }

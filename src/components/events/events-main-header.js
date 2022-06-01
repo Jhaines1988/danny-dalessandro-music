@@ -1,6 +1,5 @@
 import React from 'react';
 import * as styles from './events-main-header.module.css';
-import BackgroundStatic from './events-background';
 const EventsMainHeader = ({ header }) => {
   return (
     <div className={styles.headerContainer}>

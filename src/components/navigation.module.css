@@ -122,11 +122,12 @@
 @media (min-width: 40rem) {
   .container {
     justify-content: space-between;
+    align-items: center;
   }
 
   .navigation {
     padding-left: 0;
-    width: 44%;
+
     justify-content: space-around;
   }
 
@@ -138,6 +139,16 @@
   }
 }
 
+@media (min-width: 768px) {
+  .nav-item {
+    margin: 0 0.75rem;
+  }
+}
+@media (min-width: 1000px) {
+  .nav-item {
+    margin: 0 1.4rem;
+  }
+}
 @media (min-width: 1280px) {
   .container {
     font-size: 24px;

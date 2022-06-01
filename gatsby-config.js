@@ -25,8 +25,17 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: `Danny D'Alessandro Music`,
-    description: `Hire Professional Musician Danny D'Alessandro. Performer, Singer-Songwriter, Multi-instrumentalst and Band available for hire. Available for special events, weddings, parties, and anything else that you need music for in Telluride, Colorado`,
+    description: ` Danny D'Alessandro is a professional musician for hire based in Telluride, Colorado.  Danny D'Alessandro is a performer, singer-songwriter, multi-instrumentalst and studio musician  for hire. Available for special events, weddings, parties, and much more.`,
     siteUrl: `https://dannydalessandromusicmaster.gtsb.io/`,
+    siteName: `Danny D'Alessandro Music`,
+    image: `/dannySax.png`,
+    keywords: [
+      "Danny D'Alessandro",
+      "Danny D'Alessandro Music",
+      'Musicians In Telluride Colorado',
+      'Studio Musician',
+      'Singer-Songwriter',
+    ],
   },
   plugins: [
     {

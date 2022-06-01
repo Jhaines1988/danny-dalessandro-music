@@ -13,7 +13,7 @@ const EventInformation = ({ eventDescription, gatsbyImage, ...props }) => {
 
       {gatsbyImage && (
         <GatsbyImage
-          alt=''
+          alt='Danny Playing Saxophone'
           className={styles.gatsbyImage}
           image={gatsbyImage.gatsbyImageData}
         />
